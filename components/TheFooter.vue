@@ -1,0 +1,5 @@
+<template>
+  <footer id="footer">
+    <p>&copy;temp 2021</p>
+  </footer>
+</template>
