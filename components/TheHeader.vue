@@ -1,9 +1,9 @@
 <template lang="pug">
 header.w-screen.bg-blue-400.fixed.z-50
   dev.max-w-screen-lg.mx-auto.flex.justify-between.items-center
-    div.pl-16
+    div.pl-3.md_pl-16
       h1.text-3xl
-        NuxtLink.text-white.font-barlow(to="/") temp
+        NuxtLink.text-white.font-thin.font-barlow(to="/") temp
     HeaderNav(v-if="width >= 767")
 
     div.header-hamburger(v-if="width < 767", @click="showList()")
@@ -54,7 +54,6 @@ header {
     position: relative;
     width: 50px;
     height: 48px;
-    margin-right: 12px;
     background: none;
     border: none;
     appearance: none;
