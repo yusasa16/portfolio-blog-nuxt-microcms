@@ -1,35 +1,34 @@
-<template>
-  <header id="header">
-    <div class="header-inner">
-      <div class="header-inner__logo">
-        <h1><a href="__URL__">temp</a></h1>
-      </div>
-      <nav v-if="width >= 767" class="header-inner__nav pc-only">
-        <ul>
-          <li><a href="__URL__">nav1</a></li>
-          <li><a href="__URL__">nav2</a></li>
-          <li><a href="__URL__">nav3</a></li>
-          <li><a href="__URL__">nav4</a></li>
-        </ul>
-      </nav>
-      <div v-if="width < 767" class="header-inner__hamburger sp-only" @click="showList()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
-    <div v-if="show" class="header-modal on">
-      <nav class="header-modal__nav">
-        <ul>
-          <li><a href="__URL__">nav1</a></li>
-          <li><a href="__URL__">nav2</a></li>
-          <li><a href="__URL__">nav3</a></li>
-          <li><a href="__URL__">nav4</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<template lang="pug">
+header
+  dev.header-inner
+    div.header-inner__logo
+      h1
+        NuxtLink(to="/") temp
+    nav.header-inner__nav(v-if="width >= 767")
+      ul
+        li
+          NuxtLink(to="/nav1") nav1
+        li
+          NuxtLink(to="/nav2") nav2
+        li
+          NuxtLink(to="/nav3") nav3
+        li
+          NuxtLink(to="/nav4") nav4
+    div.header-inner__hamburger(v-if="width < 767", @click="showList()")
+      span
+      span
+      span
+  div.header-modal.on(v-if="show")
+    nav.header-modal__nav
+      ul
+        li
+          NuxtLink(to="/nav1") nav1
+        li
+          NuxtLink(to="/nav2") nav2
+        li
+          NuxtLink(to="/nav3") nav3
+        li
+          NuxtLink(to="/nav4") nav4
 </template>
 
 <script>

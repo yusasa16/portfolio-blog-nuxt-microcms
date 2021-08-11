@@ -18,6 +18,9 @@
     "@nuxtjs/tailwindcss": "^4.2.0",
     "node-sass": "4.14",
     "postcss": "^8.3.5",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.1.0",
     "sass-loader": "10.1.0"
   }
 }
