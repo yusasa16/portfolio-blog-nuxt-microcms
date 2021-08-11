@@ -1,5 +1,5 @@
 <template lang="pug">
-header.w-screen.bg-blue-400.fixed.z-50
+header.w-screen.bg-blue-400.relative.z-50
   dev.max-w-screen-lg.mx-auto.flex.justify-between.items-center
     div.pl-3.md_pl-16
       h1.text-3xl
