@@ -6,10 +6,12 @@
 import axios from 'axios'
 
 export default {
-  async asyncData() {
+  async asyncData({ params }) {
+    const page = params.p || '1'
+    const limit = 12
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
-      'https://sakuteck.microcms.io/api/v1/dummy',
+      `https://sakuteck.microcms.io/api/v1/dummy?limit=${limit}&offset=${(page - 1) * limit}`,
       {
         // your-api-key部分は自分のapi-keyに置き換えてください
         headers: { 'X-API-KEY': '5a2b1141-dbfa-4ada-8216-e68624f54486' }

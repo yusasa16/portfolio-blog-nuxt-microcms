@@ -22,6 +22,16 @@ export default {
     ]
   },
 
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/page/:p',
+        component: resolve(__dirname, 'pages/index.vue'),
+        name: 'page',
+      })
+    },
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
