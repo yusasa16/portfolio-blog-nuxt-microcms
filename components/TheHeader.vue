@@ -1,16 +1,18 @@
 <template lang="pug">
-header.w-screen.bg-blue-400.relative.z-50
-  dev.max-w-screen-lg.mx-auto.flex.justify-between.items-center
-    div.pl-3.md_pl-16
-      h1.text-3xl
-        NuxtLink.text-white.font-thin.font-barlow(to="/") temp
-    HeaderNav(v-if="width >= 767")
+div
+  header.w-screen.bg-blue-400.fixed.top-0.z-50
+    dev.max-w-screen-lg.mx-auto.flex.justify-between.items-center
+      div.pl-3.md_pl-16
+        h1.text-3xl
+          NuxtLink.text-white.font-thin.font-barlow(to="/") temp
+      HeaderNav(v-if="width >= 767")
 
-    div.header-hamburger(v-if="width < 767", @click="showList()")
-      span
-      span
-      span
-  HeaderNav(v-if="show && width <= 767")
+      div.header-hamburger(v-if="width < 767", @click="showList()")
+        span
+        span
+        span
+    HeaderNav.w-screen.bg-blue-400.absolute(v-if="show && width <= 767")
+  div(v-bind:style="{'padding-top': headerHeight}")
 </template>
 
 <script>
@@ -19,12 +21,16 @@ export default {
     return {
       show: false,
       width: window.innerWidth,
-      height: window.innerHeight
+      height: window.innerHeight,
+      headerHeight: null
     }
   },
 
   mounted () {
     window.addEventListener('resize', this.handleResize)
+
+    this.headerHeight = document.querySelector('header').clientHeight
+    this.headerHeight = this.headerHeight + 'px'
   },
 
   beforeDestroy () {
@@ -43,7 +49,7 @@ export default {
     handleResize () {
       this.width = window.innerWidth
       this.height = window.innerHeight
-    }
+    },
   }
 }
 </script>
