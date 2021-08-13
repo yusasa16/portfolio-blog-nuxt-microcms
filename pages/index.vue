@@ -25,10 +25,9 @@ export default {
       let strDate = `${date.getFullYear()}年${date.getMonth()}月${date.getDate()}日`;
       element.date = strDate;
     });
-    console.log(data)
 
     const contentsLength = (data) => {
-      if(data.length < limit) {
+      if(data.contents.length < limit) {
         return false
       }else{
         return true
