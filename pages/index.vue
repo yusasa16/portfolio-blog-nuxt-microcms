@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    div.w-10in12.w-screen-lg.py-32.mx-auto.flex.justify-center.flex-wrap.text-center
+    div.w-10in12.w-screen-lg.py-8.md_py-32.mx-auto.flex.justify-center.flex-wrap.text-center
       div.w-full.md_w-5in12.max-w-sm.mb-12.md_mb-8
         div.w-full.h-full.px-4
           NuxtLink.block.h-full.py-20.px-6.rounded-lg.bg-green-200.shadow-md.hover_bg-green-300.duration-300(to="/tech")
