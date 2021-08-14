@@ -1,45 +1,18 @@
 <template lang="pug">
   div
-    BlogCards.mt-10(:blogs="microcms.contents")
-    Pagination.mt-10(:currentPage="currentPage" :contentsLength="contentsLength")
+    div.w-10in12.w-screen-lg.py-32.mx-auto.flex.justify-around.flex-wrap.text-center
+      div.w-full.md_w-5in12.mb-12.md_mb-8
+        div.w-full.h-full.px-4
+          NuxtLink.block.h-full.py-4.px-6.rounded-lg.shadow-md.hover_bg-blue-50.duration-300(to="/tech")
+            <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+            p.mt-4.text-lg 技術ブログ
+      div.w-full.md_w-5in12.mb-4.md_mb-8
+        div.w-full.h-full.px-4
+          NuxtLink.block.h-full.py-4.px-6.rounded-lg.shadow-md.hover_bg-blue-50.duration-300(to="/hobby")
+            <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+            p.mt-4.text-lg 趣味ブログ
 </template>
 
 <script>
-import axios from 'axios'
-
-export default {
-  async asyncData({ params }) {
-    const page = params.p || '1'
-    const limit = 12
-    const { data } = await axios.get(
-      `https://sakuteck.microcms.io/api/v1/dummy?limit=${limit}&offset=${(page - 1) * limit}`,
-      {
-        headers: { 'X-API-KEY': '5a2b1141-dbfa-4ada-8216-e68624f54486' }
-      }
-    );
-
-    // 投稿日時・出力用文字列変更
-    data.contents.forEach(element => {
-      let time = Date.parse(element.date)
-      let date = new Date(time);
-      let strDate = `${date.getFullYear()}年${date.getMonth()}月${date.getDate()}日`;
-      element.date = strDate;
-    });
-
-    const contentsLength = (data) => {
-      if(data.contents.length < limit) {
-        return false
-      }else{
-        return true
-      }
-    }
-
-    // return
-    return {
-      microcms: data,
-      currentPage: page,
-      contentsLength : contentsLength(data)
-    }
-  }
-}
+export default {}
 </script>
