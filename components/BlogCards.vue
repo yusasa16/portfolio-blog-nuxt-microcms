@@ -1,12 +1,16 @@
 <template lang="pug">
 div
   div.w-10in12.w-screen-lg.mx-auto.flex.justify-between.flex-wrap.after-content
-    BlogCard(v-for="blog in blogs" :date="blog.date" :category="blog.category.contentname" :title="blog.title" :id="blog.id")
+    BlogCard(v-for="blog in blogs" :date="blog.date" :category="blog.category.contentname" :title="blog.title" :id="blog.id" :contentsType="contentsType")
 </template>
 
 <script>
 export default {
-  props: ['blogs']
+  props: ['blogs', 'contentsType'],
+
+  mounted() {
+    console.log(this.contentsType)
+  }
 }
 </script>
 

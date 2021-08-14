@@ -25,8 +25,13 @@ export default {
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
-        path: '/page/:p',
-        component: resolve(__dirname, 'pages/index.vue'),
+        path: '/tech/page/:p',
+        component: resolve(__dirname, 'pages/tech/index.vue'),
+        name: 'page',
+      },
+      {
+        path: '/hobby/page/:p',
+        component: resolve(__dirname, 'pages/hobby/index.vue'),
         name: 'page',
       })
     },

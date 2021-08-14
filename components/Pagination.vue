@@ -12,13 +12,13 @@
 
 <script>
 export default {
-  props: ['currentPage', 'contentsLength'],
+  props: ['currentPage', 'contentsLength', 'contentsType'],
 
   data() {
     return {
       prevPage: Number(this.currentPage) - 1,
       nextPage: Number(this.currentPage) + 1,
-      routingPath: '/page/',
+      routingPath: `${this.contentsType}/page/`,
       existPrev: true,
       existNext: true
     }
