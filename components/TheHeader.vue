@@ -4,7 +4,7 @@ div
     dev.max-w-screen-lg.mx-auto.flex.justify-between.items-center
       div.pl-3.md_pl-16
         h1.text-3xl
-          NuxtLink.text-white.font-thin.font-barlow(to="/") temp
+          NuxtLink.text-white.font-thin.font-barlow(to="/") sakutech
       HeaderNav(v-if="width >= 767")
 
       div.header-hamburger(v-if="width < 767", @click="showList()")
