@@ -12,9 +12,9 @@ export default {
     const page = params.p || '1'
     const limit = 12
     const { data } = await axios.get(
-      `https://sakuteck.microcms.io/api/v1/blog?limit=${limit}&offset=${(page - 1) * limit}`,
+      `https://yu-sakutech.microcms.io/api/v1/hobby?limit=${limit}&offset=${(page - 1) * limit}`,
       {
-        headers: { 'X-API-KEY': '5a2b1141-dbfa-4ada-8216-e68624f54486' }
+        headers: { 'X-API-KEY': 'd941944c-cd1a-4ba0-bbd6-27e0eea69e34' }
       }
     );
 

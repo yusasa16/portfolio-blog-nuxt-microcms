@@ -11,9 +11,9 @@ import axios from 'axios'
 export default {
   async asyncData({ params }) {
     const { data } = await axios.get(
-      `https://sakuteck.microcms.io/api/v1/blog/${params.slug}`,
+      `https://yu-sakutech.microcms.io/api/v1/hobby/${params.slug}`,
       {
-        headers: { 'X-API-KEY': '5a2b1141-dbfa-4ada-8216-e68624f54486' }
+        headers: { 'X-API-KEY': 'd941944c-cd1a-4ba0-bbd6-27e0eea69e34' }
       }
     )
 
