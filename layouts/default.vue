@@ -5,3 +5,9 @@
     <TheFooter />
   </div>
 </template>
+
+<style lang="scss" scoped>
+* {
+  @apply font-notosansjp
+}
+</style>

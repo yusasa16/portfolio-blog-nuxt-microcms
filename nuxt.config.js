@@ -65,6 +65,7 @@ export default {
     google: {
       families: [
         'barlow',
+        'Noto+Sans+JP'
       ]
     }
   },

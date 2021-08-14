@@ -28,6 +28,7 @@ module.exports = {
       },
       fontFamily: {
         'barlow': ['Barlow', 'sans-serif'],
+        'notosansjp': ['Noto Sans JP', 'sans-serif']
       }
     },
   },
