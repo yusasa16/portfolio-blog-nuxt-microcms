@@ -59,6 +59,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-webfontloader',
+    '@nuxtjs/google-gtag',
   ],
 
   webfontloader: {
@@ -68,6 +69,10 @@ export default {
         'Noto+Sans+JP'
       ]
     }
+  },
+
+  'google-gtag': {
+    id: 'G-CXWCG7J71L',
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
