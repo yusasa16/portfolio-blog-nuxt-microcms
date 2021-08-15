@@ -2,7 +2,7 @@
 nav
   ul
     HeaderNavLink(text="tech", link="/tech" @close="closeNav")
-    HeaderNavLink(text="daily", link="/hobby" @close="closeNav")
+    HeaderNavLink(text="daily", link="/daily" @close="closeNav")
 </template>
 
 <script>

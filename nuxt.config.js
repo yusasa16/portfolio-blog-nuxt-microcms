@@ -30,8 +30,8 @@ export default {
         name: 'page',
       },
       {
-        path: '/hobby/page/:p',
-        component: resolve(__dirname, 'pages/hobby/index.vue'),
+        path: '/daily/page/:p',
+        component: resolve(__dirname, 'pages/daily/index.vue'),
         name: 'page',
       })
     },
