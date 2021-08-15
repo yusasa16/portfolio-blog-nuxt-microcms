@@ -3,7 +3,7 @@
     div.ttl-archive
       h1.text-center.text-white.text-6xl.font-lilyscriptone.py-20 tech
     BlogCards.mt-10(:blogs="microcms.contents" contentsType="/tech")
-    Pagination.mt-10(:currentPage="currentPage" :contentsLength="contentsLength" contentsType="/tech")
+    //- Pagination.mt-10(:currentPage="currentPage" :contentsLength="contentsLength" contentsType="/tech")
 </template>
 
 <script>
