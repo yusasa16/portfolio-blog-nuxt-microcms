@@ -7,10 +7,6 @@ div
 <script>
 export default {
   props: ['blogs', 'contentsType'],
-
-  mounted() {
-    console.log(this.contentsType)
-  }
 }
 </script>
 

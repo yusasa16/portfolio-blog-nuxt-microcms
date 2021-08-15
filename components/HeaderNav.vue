@@ -1,6 +1,16 @@
 <template lang="pug">
 nav
   ul
-    HeaderNavLink(text="技術ブログ", link="/tech")
-    HeaderNavLink(text="趣味ブログ", link="/hobby")
+    HeaderNavLink(text="tech", link="/tech" @close="closeNav")
+    HeaderNavLink(text="daily", link="/hobby" @close="closeNav")
 </template>
+
+<script>
+export default {
+  methods: {
+    closeNav: function() {
+      this.$emit('close');
+    }
+  }
+}
+</script>

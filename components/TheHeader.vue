@@ -11,7 +11,7 @@ div
         span
         span
         span
-    HeaderNav.w-screen.bg-white.absolute(v-if="show")
+    HeaderNav.w-screen.bg-white.absolute(v-if="show" @close="closeNav")
   div(v-bind:style="{'padding-top': headerHeight}")
 </template>
 
@@ -50,6 +50,10 @@ export default {
       this.width = window.innerWidth
       this.height = window.innerHeight
     },
+
+    closeNav() {
+      this.show = false
+    }
   }
 }
 </script>
