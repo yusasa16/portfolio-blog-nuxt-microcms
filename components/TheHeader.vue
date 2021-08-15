@@ -4,7 +4,7 @@ div
     dev.max-w-screen-lg.mx-auto.flex.justify-center.items-center
       div
         h1
-          NuxtLink.text-black.font-lilyscriptone.text-4xl.text-gray-700.hover_text-main-100.py-2.duration-300.inline-block(to="/") sakutech
+          NuxtLink.text-black.font-lilyscriptone.text-4xl.text-gray-700.md_hover_text-main-100.py-2.duration-300.inline-block(to="/") sakutech
       //- HeaderNav(v-if="width >= 767")
 
       div.header-hamburger(@click="showList()")
