@@ -1,6 +1,6 @@
 <template lang="pug">
   li
-    NuxtLink.md_text-base.text-white.leading-10.w-full.md_w-auto.p-3.md_px-8.inline-block.duration-300.hover_bg-blue-300(v-bind:to="link")
+    NuxtLink.md_text-base.text-black.text-center.leading-10.w-full.p-3.md_px-8.inline-block.duration-300.hover_bg-white(v-bind:to="link")
       | {{ text }}
 </template>
 

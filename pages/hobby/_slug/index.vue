@@ -1,8 +1,11 @@
 <template lang="pug">
-main.max-w-3xl.mx-auto.mt-10.px-4.sm_px-8
-  h1.text-4xl {{ microcms.title }}
-  p.mt-4.md_mt-6.text-sm.text-right.text-gray-500 {{ microcms.date }}
-  div.p-6.mt-4.shadow-xl.rounded-lg.post-article(v-html="microcms.article")
+main
+  div.ttl-article.text-white
+    div.max-w-3xl.mx-auto.p-6.pt-10.pb-40
+      h1.text-4xl {{ microcms.title }}
+      p.mt-4.md_mt-6.text-sm.text-right {{ microcms.date }}
+  div.px-6
+    div.max-w-3xl.mx-auto.p-6.mt-4.shadow-xl.bg-white.rounded-lg.post-article(v-html="microcms.article")
 </template>
 
 <script>

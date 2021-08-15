@@ -66,6 +66,7 @@ export default {
     google: {
       families: [
         'barlow',
+        'Lily+Script+One',
         'Noto+Sans+JP'
       ]
     }

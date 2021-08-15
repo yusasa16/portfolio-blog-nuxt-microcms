@@ -1,17 +1,17 @@
 <template lang="pug">
 div
-  header.w-screen.bg-blue-400.fixed.top-0.z-50
-    dev.max-w-screen-lg.mx-auto.flex.justify-between.items-center
-      div.pl-3.md_pl-16
-        h1.text-3xl
-          NuxtLink.text-white.font-thin.font-barlow(to="/") sakutech
-      HeaderNav(v-if="width >= 767")
+  header.w-screen.bg-white.fixed.top-0.z-50
+    dev.max-w-screen-lg.mx-auto.flex.justify-center.items-center
+      div
+        h1
+          NuxtLink.text-black.font-lilyscriptone.text-4xl.text-gray-700.hover_text-main-100.py-2.duration-300.inline-block(to="/") sakutech
+      //- HeaderNav(v-if="width >= 767")
 
-      div.header-hamburger(v-if="width < 767", @click="showList()")
+      div.header-hamburger(@click="showList()")
         span
         span
         span
-    HeaderNav.w-screen.bg-blue-400.absolute(v-if="show && width <= 767")
+    HeaderNav.w-screen.bg-white.absolute(v-if="show")
   div(v-bind:style="{'padding-top': headerHeight}")
 </template>
 
@@ -57,7 +57,8 @@ export default {
 <style lang="scss" scoped>
 header {
   .header-hamburger {
-    position: relative;
+    position: absolute;
+    right: 0;
     width: 50px;
     height: 48px;
     background: none;
@@ -72,7 +73,7 @@ header {
       left: 12px;
       width: 27px;
       height: 3px;
-      background-color: #fff;
+      background-color: #000;
       border-radius: 4px;
       display: inline-block;
       transition: all 400ms;

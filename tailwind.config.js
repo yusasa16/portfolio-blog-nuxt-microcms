@@ -24,10 +24,12 @@ module.exports = {
         '12in12': '100%',
       },
       colors: {
-        'main': '#009ccb',
+        'main': '#017EA9',
+        'main-100': '#01A6DE',
       },
       fontFamily: {
         'barlow': ['Barlow', 'sans-serif'],
+        'lilyscriptone': ['Lily Script One', 'cursive'],
         'notosansjp': ['Noto Sans JP', 'sans-serif']
       }
     },
