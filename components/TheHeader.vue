@@ -20,15 +20,11 @@ export default {
   data () {
     return {
       show: false,
-      width: window.innerWidth,
-      height: window.innerHeight,
       headerHeight: null
     }
   },
 
   mounted () {
-    window.addEventListener('resize', this.handleResize)
-
     this.headerHeight = document.querySelector('header').clientHeight
     this.headerHeight = this.headerHeight + 'px'
   },
@@ -44,11 +40,6 @@ export default {
       } else {
         this.show = true
       }
-    },
-
-    handleResize () {
-      this.width = window.innerWidth
-      this.height = window.innerHeight
     },
 
     closeNav() {
