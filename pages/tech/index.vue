@@ -18,14 +18,6 @@ export default {
       }
     );
 
-    // 投稿日時・出力用文字列変更
-    data.contents.forEach(element => {
-      let time = Date.parse(element.date)
-      let date = new Date(time);
-      let strDate = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
-      element.date = strDate;
-    });
-
     const contentsLength = (data) => {
       if(data.contents.length < limit) {
         return false
@@ -41,6 +33,13 @@ export default {
       contentsLength: contentsLength(data),
       contentsType: 'tech'
     }
+  },
+
+  mounted() {
+    // 投稿日時・出力用文字列変更
+    this.microcms.contents.forEach(element => {
+      element.date = this.$dateFormat(element.date)
+    })
   }
 }
 </script>

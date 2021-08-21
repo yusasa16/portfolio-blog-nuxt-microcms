@@ -15,16 +15,15 @@ export default {
       }
     )
 
-    // 投稿日時・出力用文字列変更
-    let time = Date.parse(data.date);
-    let date = new Date(time);
-    let strDate = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
-    data.date = strDate;
-
     return {
       microcms: data
     }
   },
+
+  mounted() {
+    // 投稿日時・出力用文字列変更
+    this.microcms.date = this.$dateFormat(this.microcms.date)
+  }
 }
 </script>
 
