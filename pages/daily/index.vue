@@ -24,7 +24,7 @@ export default {
     data.contents.forEach(element => {
       let time = Date.parse(element.date)
       let date = new Date(time);
-      let strDate = `${date.getFullYear()}年${date.getMonth()}月${date.getDate()}日`;
+      let strDate = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
       element.date = strDate;
     });
 
