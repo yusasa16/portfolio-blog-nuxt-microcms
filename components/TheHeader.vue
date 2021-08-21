@@ -5,13 +5,18 @@ div
       div
         h1
           NuxtLink.text-black.font-lilyscriptone.text-4xl.text-gray-700.md_hover_text-main-100.py-2.duration-300.inline-block(to="/") sakutech
-      //- HeaderNav(v-if="width >= 767")
 
-      div.header-hamburger(@click="showList()")
+      div.header-hamburger(
+        :class="{'show' : show}"
+        @click="showList()")
         span
         span
         span
-    HeaderNav.w-screen.bg-white.absolute(v-if="show" @close="closeNav")
+
+    //- ハンバーガーボタンクリック後表示ナビ
+    HeaderNav.w-screen.fixed(:show="show" @close="closeNav")
+
+  //- ヘッダーの高さ分padding設定
   div(v-bind:style="{'padding-top': headerHeight}")
 </template>
 
@@ -27,10 +32,6 @@ export default {
   mounted () {
     this.headerHeight = document.querySelector('header').clientHeight
     this.headerHeight = this.headerHeight + 'px'
-  },
-
-  beforeDestroy () {
-    window.removeEventListener('resize', this.handleResize)
   },
 
   methods: {
@@ -86,7 +87,7 @@ header {
       }
     }
 
-    &.on {
+    &.show {
       span:nth-of-type(1) {
         transform: translateY(9px) rotate(-45deg);
       }
